@@ -531,7 +531,7 @@ static _mali_osk_errcode_t enable_mali_clocks(void)
 	if (mali_gpu_clk <= mali_runtime_resume.clk)
 		set_mali_dvfs_current_step(MALI_DVFS_STEPS + 1);
 	/* lock/unlock CPU freq by Mali */
-	if (mali_gpu_clk >= 533)
+	if (mali_gpu_clk >= 600)
 		err = cpufreq_lock_by_mali(1400);
 	else if (mali_gpu_clk >= 440)
 		err = cpufreq_lock_by_mali(1200);
